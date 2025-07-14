@@ -2,17 +2,17 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  let [counter, setCounter] = useState(5)
+  let [counter, setCounter] = useState(1)
 
   const addValue = () => {
-    console.log('add value', counter)
-    // counter += 1
-    setCounter(counter + 1)
+    if (counter < 20) {
+      setCounter(counter + 1)
+    }
   }
   const removeValue = () => {
-    console.log('remove value', counter)
-    // counter -= 1
-    setCounter(counter - 1)
+    if (counter > 0) {
+      setCounter(counter - 1)
+    }
   }
 
   return (
@@ -21,12 +21,13 @@ function App() {
       <h2>Counter value : {counter}</h2>
       <button
         onClick={addValue}
-
+        disabled={counter >= 20}
       >Add Value : {counter}</button>
       <br />
       <br />
       <button
         onClick={removeValue}
+        disabled={counter <= 0}
       >Remove Value : {counter}</button>
       <br />
       <br />
