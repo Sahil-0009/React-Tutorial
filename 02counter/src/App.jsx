@@ -22,12 +22,15 @@ function App() {
       <button
         onClick={addValue}
 
-      >Add vlaue {counter}</button>
+      >Add Value : {counter}</button>
+      <br />
       <br />
       <button
         onClick={removeValue}
-      >remove value {counter}</button>
-      <footer>footer {counter}</footer>
+      >Remove Value : {counter}</button>
+      <br />
+      <br />
+      {/* <footer>footer {counter}</footer> */}
     </>
   )
 }
